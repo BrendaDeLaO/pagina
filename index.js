@@ -6,6 +6,8 @@ const PORT = 3000;
 
 //Objetos para llamar los metodos de express  
 const app = express();  
+const mysql = requiere('mysql');
+const connection = 
 
 //Ruta de archivos estáticos  
 app.use(express.static("public"));  
