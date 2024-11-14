@@ -1,0 +1,745 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: linear-gradient(rgba(66, 52, 53, 1) -50%, rgba(81, 63, 64, 1) 2%, rgb(49, 36, 38) 15%);
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.3em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+
+nav {
+    backdrop-filter: blur(50px);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 70px;
+    margin-left: 15px;
+}
+
+.menu-hamburguesa {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s;
+    margin-right: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+nav li {
+    position: relative;
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav a {
+    color: rgba(255, 249, 249, 1);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ff6a00;
+    color: #fff;
+}
+
+.dropdown {
+    background-color: #333;
+    display: none;
+    position: absolute;
+    backdrop-filter: blur(150px);
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    white-space: nowrap;
+}
+
+nav li:hover .dropdown {
+    display: block;
+}
+
+/*PORTADA*/
+.container_cover {
+    width: 100%;
+    height: 105vh;
+}
+
+.cover{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container_cover .conten{
+    margin-left: 25vh;
+}
+
+.container_cover .conten h1{
+    color: #fff;
+    font-size: 53px;
+    font-weight: 600;
+}
+
+.container_cover .conten input{
+    color: #fff;
+    padding: 18px 80px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 40px;
+    background:rgba(241, 111, 36, 1);
+    cursor: pointer;
+    box-shadow: 1px 1px 30px -12px rgb(237, 140, 84);
+    transition: all 300ms;
+    font-size: 20px;
+}
+
+.container_cover .conten input:hover{
+    box-shadow: 1px 1px 30px -6px rgb(237, 140, 84);
+}
+.container_cover .png img{
+    width: 400px;
+    animation: move-vector 3s linear infinite;
+}
+
+/*REDES*/
+.social{
+    position: absolute;
+    top: 50%;
+    padding: 0 8%;
+    transform: translateY(-50%);
+}
+
+.social a{
+    text-decoration: none;
+}
+
+.social i{
+    display: block;
+    color: rgba(251, 185, 147, 1);
+    margin: 28px 0;
+    font-size: 22px;
+    transition: all .7s ease;
+}
+.social i:hover{
+    transform: scale(1,1) translate(-5px);
+}
+
+.buuton_box{
+    text-align: center;
+    position: absolute;
+    bottom: 1%;
+    right: 45%;
+    color: #FFFFFF;
+}
+
+.buuton_box i{
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+}
+
+.buuton_box p{
+    margin-top: -2vh;
+    font-size: 15px;
+}
+
+@keyframes move-vector {
+    0% {
+        transform: translateY(15px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+/*QUE ES EL ODS*/
+
+.contenedor1 {
+    color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin: 60px auto;
+}
+
+.contenedor1 p {
+    font-size: 20px;
+    text-align: justify;
+    margin: 8vh;
+}
+
+.contenedor1 .texto h1{
+    font-size: 40px;
+    text-align: justify;
+    margin: 8vh;
+}
+
+.contenedor1 .texto a{
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.contenedor1 .texto i{
+    margin-right: 2vh;
+    font-size: 25px;
+}
+
+/*PORQUE SON IMPORTANTES*/
+.contenedor2 {
+    color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin: 60px auto;
+}
+
+.contenedor2 .texto-dos {
+    text-align: justify;
+    align-items: center;
+}
+.contenedor2 h1 {
+    font-size: 40px;
+    text-align: justify;
+    margin: 5vh;
+}
+.contenedor2 p {
+    font-size: 20px;
+    margin: 5vh;
+}
+
+.contenedor2 .texto-dos .frase{
+    text-align: center;
+}
+
+.contenedor2 .texto-dos .frase img{
+    margin-top: 2vh;
+}
+
+.contenedor2 .texto-dos .frase p{
+    margin-top: 2vh;
+    font-size: 15px;
+}
+
+/*LINEA SUPERIOR DEL TITULO 17 ODS*/
+hr{
+    margin: auto;
+    width: 20%;
+    border: none;
+    background: rgba(200, 143, 110, 1);
+    height: 5px;
+    border-radius: 20px;
+}
+
+
+/*GALERIA DE IMAGENES DE LOS 17 ODS*/
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.galeria h1 {
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.contenedor-imagenes {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.contenedor-imagenes .imagen {
+    flex: 1 1 29%; 
+    margin: 10px; 
+    position: relative;
+    max-width: 300px; 
+}
+
+.galeria img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.galeria .imagen .overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(50px);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 1s all ease;
+    text-align: center;
+    opacity: 0; 
+}
+
+.galeria .imagen .overlay p {
+    font-weight: normal;
+    color: #fff;
+    margin-top: 15%;
+    line-height: 22px;
+    font-size: 22px; 
+    text-align: justify;
+}
+
+.galeria .imagen:hover .overlay {
+    opacity: 1; 
+}
+
+#verMas, #verMenos {
+    margin: 20px auto;
+    padding: 10px 90px;
+    font-size: 18px;
+    border: 4px solid rgba(134, 73, 63, 1);
+    cursor: pointer;
+    background: rgba(251, 185, 147, 1);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 4vh;
+    background: linear-gradient(to bottom, rgb(48, 29, 33), rgb(15, 9, 9));
+    text-align: center;
+    color: white; 
+    padding: 20px; 
+}
+
+.footer img{
+    margin-bottom: 2vh;
+}
+
+.footer .icono{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.footer .icono li{
+    list-style: none;
+}
+
+.footer .icono li a {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+.footer ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+}
+
+.footer ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+.footer ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+
+.footer ul li a:hover:before {
+    top: 0;
+}
+
+.footer ul li:nth-child(1) a:before {
+    background: rgba(41, 170, 225, 1);
+}
+
+.footer ul li:nth-child(2) a:before {
+    background: rgba(0, 56, 130, 1);
+}
+
+.footer ul li:nth-child(3) a:before {
+    background: #ff0f0f;
+}
+
+.footer ul li:nth-child(4) a:before {
+    background: linear-gradient(rgba(252, 1, 216, 1),rgba(255, 152, 2, 1));
+}
+
+.footer .busquedas li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    
+}
+
+.footer .copyright{
+    font-weight: bold;
+    font-size: 13px
+}
+
+@media (max-width: 768px) {
+
+    /*MENU HAMBURGUESA*/
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .menu-hamburguesa i{
+        color: #FFFFFF;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        padding: 70px 0px;
+        margin-top: 30px;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav ul li {
+        font-size: 18px;
+        text-align: center;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .dropdown a {
+        display: none;
+    }
+
+    /*Ocultar redes*/
+    .social{
+        display: none;
+    }
+
+    .cover{
+        margin-left: -22vh;
+        margin-top: 10%;
+    }
+
+    .cover .conten h1{
+        font-size: 46px;
+        align-items: center;
+    }
+
+    .png{
+        display: none;
+    }
+
+    .buuton_box{
+        bottom: 1%;
+        right: 40%;
+    }
+
+    .container_cover .conten input{
+        color: #fff;
+        padding: 10px 50px;
+        border: none;
+        border-radius: 20px;
+        margin-top: 40px;
+        background:rgba(241, 111, 36, 1);
+        cursor: pointer;
+        box-shadow: 1px 1px 30px -12px rgb(237, 140, 84);
+        transition: all 300ms;
+        font-size: 15px;
+    }
+
+    /*QUE ES EL ODS*/
+    .contenedor1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor1 img{
+        width: 200px;
+        height: 200px;
+    }
+    .contenedor1 p {
+        font-size: 17px;
+        margin: 1.5vh;
+    }
+
+    /*PORQUE SON IMPORTANTES*/
+    .contenedor2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor2 h2 {
+        font-size: 26px;
+    }
+
+    .contenedor2 img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .contenedor2 p {
+        font-size: 17px;
+        margin: 1.5vh;
+    }
+
+    .contenedor2 .texto-dos .frase p{
+        margin-bottom: 3vh;
+    }
+
+    .contenedor2 .texto-dos .frase img{
+        width: 40px;
+        height: 40px
+    };
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .galeria h1 {
+        font-size: 35px; 
+    }
+
+    .contenedor-imagenes .imagen {
+        flex: 1 1 45%; 
+    }
+
+    .galeria .imagen .overlay p {
+        margin-top: 8%;
+        font-size: 25px; 
+    }
+
+    .cover{
+        margin-left: -20vh;
+    }
+
+    .cover .conten h1{
+        font-size: 44px;
+        align-items: center;
+    }
+
+    .container_cover .png img{
+        width: 247px;
+        margin-left: -24vh;
+    }
+
+    .social{
+        display: none;
+    }
+
+    /*QUE ES EL ODS*/
+    .contenedor1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor1 img{
+        width: 200px;
+        height: 200px;
+    }
+    .contenedor1 p {
+        font-size: 23px;
+        margin: 1.5vh;
+    }
+
+    /*PORQUE SON IMPORTANTES*/
+    .contenedor2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor2 ,.texto-dos h1 {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .contenedor2 img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .contenedor2 p {
+        font-size: 23px;
+        margin: 1.5vh;
+    }
+
+    .contenedor2 .texto-dos .frase p{
+        margin-bottom: 3vh;
+        font-size: 18px;
+    }
+
+    .contenedor2 .texto-dos .frase img{
+        width: 40px;
+        height: 40px
+    };
+
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+
+    .container_cover .cover {
+        margin-top: 5%;
+    }
+
+    .cover .conten h1{
+        font-size: 43px;
+    }
+
+    .galeria h1 {
+        font-size: 30px; 
+    }
+
+    .contenedor-imagenes .imagen {
+        flex: 1 1 48%; 
+    }
+
+    .galeria .imagen .overlay p {
+        margin-top: 7vh;
+        font-size: 16px; 
+    }
+
+    /*QUE ES EL ODS*/
+    .contenedor1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor1 img{
+        width: 200px;
+        height: 200px;
+    }
+    .contenedor1 p {
+        font-size: 17px;
+        margin: 0vh;
+    }
+
+    .contenedor1 p a i{
+        margin-top: 2vh;
+    }
+    .contenedor1 .texto h1{
+        font-size: 40px;
+        width: 90%;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    /*PORQUE SON IMPORTANTES*/
+    .contenedor2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor2 h2 {
+        font-size: 26px;
+    }
+
+    .contenedor2 img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .contenedor2 p {
+        font-size: 17px;
+        margin: 4vh;
+        
+    }
+
+    .contenedor2 .texto-dos .frase p{
+        margin-bottom: 3vh;
+    }
+
+    .contenedor2 .texto-dos .frase img{
+        width: 40px;
+        height: 40px
+    };
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 500px) {
+    .galeria h1 {
+        font-size: 26px; 
+    }
+
+    .contenedor-imagenes .imagen {
+        flex: 1 1 90%; 
+    }
+
+    .galeria .imagen .overlay p {
+        margin-top: 9vh;
+        font-size: 20px; 
+    }
+
+    .cover{
+        margin-left: -22vh;
+        margin-top: 10%;
+    }
+
+    .cover .conten h1{
+        font-size: 44px;
+        align-items: center;
+    }
+}

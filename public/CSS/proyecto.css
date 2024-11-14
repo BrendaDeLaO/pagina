@@ -1,0 +1,470 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: linear-gradient(rgba(66, 52, 53, 1) -50%, rgba(81, 63, 64, 1) 2%, rgb(49, 36, 38) 15%);
+}
+
+nav {
+    backdrop-filter: blur(50px);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 70px;
+    margin-left: 15px;
+}
+
+.menu-hamburguesa {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s;
+    margin-right: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+nav li {
+    position: relative;
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav a {
+    color: rgba(255, 249, 249, 1);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ff6a00;
+    color: #fff;
+}
+
+.dropdown {
+    background-color: #333;
+    display: none;
+    position: absolute;
+    backdrop-filter: blur(150px);
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    white-space: nowrap;
+}
+
+nav li:hover .dropdown {
+    display: block;
+}
+
+/*PORTADA*/
+.portada{
+    margin-top: 4vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7) 
+    )
+    ,url(/IMAGENES/portadaProyecto.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+}
+
+/*PROYECTO*/
+.proyecto {
+    color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin: 60px auto;
+}
+
+.proyecto .text {
+    text-align: justify;
+    align-items: center;
+}
+.proyecto h1 {
+    font-size: 40px;
+    text-align: justify;
+    margin: 5vh;
+}
+.proyecto p {
+    font-size: 20px;
+    margin: 5vh;
+}
+
+/*TITULO CARACTERISTICAS*/
+.titulo{
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 18vh;
+    margin-bottom: 3vh;
+    justify-content: center;
+}
+
+/*CUADROS CARACTERISTICAS*/
+.containerCarta {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin-top: 15vh;
+}
+
+.containerCarta .card {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    height: 250px;
+    background: rgba(200, 143, 110, 1);
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.containerCarta .card:hover {
+    height: 485px; 
+}
+
+.containerCarta .card .img {
+    position: relative;
+    width: calc(100% - 40px);
+    height: 300px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.containerCarta .card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.containerCarta .card .content {
+    position: relative;
+    margin-bottom: -120px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.1s ease-in-out;
+}
+
+.containerCarta .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -10px;
+    transition-delay: 0.3s;
+}
+
+/*TITULO DEL VIDEO*/
+.titulo2{
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    justify-content: center;
+}
+
+video{
+    width: 56%;
+    height: 500px;
+    margin: 20px 22%;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 4vh;
+    background: linear-gradient(to bottom, rgb(48, 29, 33), rgb(15, 9, 9));
+    text-align: center;
+    color: white; 
+    padding: 20px; 
+}
+
+.footer img{
+    margin-bottom: 2vh;
+}
+
+.footer .icono{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.footer .icono li{
+    list-style: none;
+}
+
+.footer .icono li a {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+.footer ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+}
+
+.footer ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+.footer ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+
+.footer ul li a:hover:before {
+    top: 0;
+}
+
+.footer ul li:nth-child(1) a:before {
+    background: rgba(41, 170, 225, 1);
+}
+
+.footer ul li:nth-child(2) a:before {
+    background: rgba(0, 56, 130, 1);
+}
+
+.footer ul li:nth-child(3) a:before {
+    background: #ff0f0f;
+}
+
+.footer ul li:nth-child(4) a:before {
+    background: linear-gradient(rgba(252, 1, 216, 1),rgba(255, 152, 2, 1));
+}
+
+.footer .busquedas li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    
+}
+
+.footer .copyright{
+    font-weight: bold;
+    font-size: 13px
+}
+
+
+@media (max-width: 768px) {
+    /*MENU HAMBURGUESA*/
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .menu-hamburguesa i{
+        color: #FFFFFF;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        padding: 70px 0px;
+        margin-top: 30px;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav ul li {
+        font-size: 18px;
+        text-align: center;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .dropdown a {
+        display: none;
+    }
+
+    /*PROYECTO*/
+    .proyecto {
+        display: flex;
+        flex-direction: column;
+    }
+    .proyecto h1 {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .proyecto img{
+        width: 300px;
+    }
+
+    .proyecto p {
+        font-size: 18px;
+        margin: 1.5vh;
+    }
+
+    /*CARTAS*/
+    .containerCarta{
+        margin-top: -1vh;
+    }
+
+    .containerCarta .card {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .containerCarta .card:hover {
+        height: 400px;
+    }
+
+    .containerCarta .card .img {
+        height: 200px;
+        top: -40px;
+    }
+
+    /*TITULO VIDEO*/
+    .titulo2 {
+        margin-top: 7vh;
+    }
+
+    video{
+        width: 94%;
+        height: 210px;
+        margin: 20px 2%;
+    }
+
+    .footer .busquedas{
+        font-size: 14px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .proyecto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .proyecto h1 {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .proyecto img {
+        width: 400px;
+    }
+
+    .proyecto p {
+        font-size: 23px;
+        margin: 1.5vh;
+    }
+
+    /*CARTAS*/
+    .titulo {
+        margin-top: 5vh;
+    }
+
+    .containerCarta {
+        margin-top: 4vh;
+    }
+
+    .containerCarta .card {
+        height: 300px;
+        max-width: 220px; 
+        margin: 26px; 
+    }
+
+    .containerCarta .card .content p {
+        font-size: 1.2em;
+    }
+
+    .containerCarta .card:hover {
+        height: 480px;
+    }
+
+    .containerCarta .card .img {
+        height: 220px; 
+        top: -30px; 
+    }
+
+    /*TITULO VIDEO*/
+    .titulo2 {
+        margin-top: 5vh;
+    }
+
+    video{
+        width: 94%;
+        height: 395px; 
+        margin: 20px 2%; 
+    }
+}
+

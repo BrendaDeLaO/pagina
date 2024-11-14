@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <title>InnovaNexus</title>
+    <link rel="icon" href="/IMAGENES/logoFooter.png">
+</head>
+<body>
+    <form id="formulario" class="formulario">
+        <h2 class="titulo">Formulario de contacto</h2>
+        <input type="text" name="" class="form_input" id="nombre" required>
+        <label for="" class="form_label">Nombres</label>
+        <input type="text" name="" class="form_input" id="apellido" required>
+        <label for="" class="form_label">Apellidos</label>
+        <input type="email" name="" class="form_input" id="correo" required>
+        <label for="" class="form_label">Correo</label>
+        <input type="text" name="" class="form_input" id="numero" required>
+        <label for="" class="form_label">Teléfono</label>
+        <textarea id="motivo" class="form_input" required></textarea>
+        <label for="" class="form_label">Motivo</label>
+        <p><input type="checkbox" name="terminos" required>acepto los terminos y condiciones</p>
+        <input type="submit" value="enviar" id="enviar" class="form_submit">
+        <p class="warnings" id="warnings"></p>
+        <script src="validaciones.js"></script>
+    </form>
+</body>
+</html>
