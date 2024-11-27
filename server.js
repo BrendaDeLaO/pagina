@@ -1,5 +1,8 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+const mysql = require('mysql2');
+const cors = require('cors');
 const app = express();
 const port = 3005;
 
@@ -10,17 +13,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
-});
-
-const express = require('express');
-const bodyParser = require('body-parser');
-const mysql = require('mysql2');
-const cors = require('cors');
-
-const app = express();
-const port = 4000;  // Asegúrate de que esto sea correcto
+------------------------------------------------------------------
 
 // Middleware
 app.use(cors());
@@ -29,9 +22,9 @@ app.use(bodyParser.json());
 
 // Configuración de la conexión a la base de datos
 const connection = mysql.createConnection({
-  host: 'bd05.cdggooyqe936.us-east-1.rds.amazonaws.com',
+  host: 'team05.ctes6auum80u.us-east-1.rds.amazonaws.com',
   user: 'admin',
-  password: 'team983447196',
+  password: 'equipo05',
   database: 'consultation'
 });
 
@@ -58,6 +51,6 @@ app.post('/enviar', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Servidor corriendo en http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Servidor escuchando en http://localhost:${port}`);
 });
