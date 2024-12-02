@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 const cors = require('cors');
 
 const app = express();
-const port = 4000;  // Asegúrate de que esto sea correcto
+const port = 4001;  // Asegúrate de que esto sea correcto
 
 // Middleware
 app.use(cors());
@@ -13,9 +13,9 @@ app.use(bodyParser.json());
 
 // Configuración de la conexión a la base de datos
 const connection = mysql.createConnection({
-  host: 'team05.ctes6auum80u.us-east-1.rds.amazonaws.com',
+  host: 'bd05.cdggooyqe936.us-east-1.rds.amazonaws.com',
   user: 'admin',
-  password: 'equipo05',
+  password: 'team983447196',
   database: 'consultation'
 });
 
@@ -43,5 +43,5 @@ app.post('/enviar', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor corriendo en http://localhost:${port}`);
+  console.log(`Servidor corriendo en http://54.162.70.89:${port}`);
 });

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadatos para la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icono de la página -->
+    <link rel="icon" href="./IMAGENES/logoFooter.png">
+
+    <!-- Enlaces a archivos CSS para estilos -->
+    <link rel="stylesheet" href="./CSS/proyecto.css">
+    <link rel="stylesheet" href="./CSS/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>InnovaNexus</title>
+</head>
+
+<body>
+
+    <!-- Animación de carga -->
+    <div id="loaderPage" class="seccion_loader">
+        <div class="loader">
+            <div class="loader_1"></div>
+            <div class="loader_2"></div>
+        </div>
+    </div>
+    <script src="./JS/loader.js"></script>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <!-- Logo de la página -->
+        <img src="./IMAGENES/icono1.png" alt="Logo" class="logo">
+
+        <!-- Menú hamburguesa para dispositivos móviles -->
+        <div class="menu-hamburguesa" id="menuHamburguesa">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Enlaces de navegación -->
+        <ul id="menu">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./ods09.html">ODS09</a></li>
+            <li>
+                <a href="./proyecto.html">Proyecto</a>
+                <div class="dropdown">
+                    <a href="#porque">¿Por qué?</a>
+                    <a href="#caracteristica">Características</a>
+                    <a href="#descubre">Descubre</a>
+                    <a href="#redes">Redes Sociales</a>
+                </div>
+            </li>
+            <li><a href="./explora.html">Explora</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <script src="./JS/menu.js"></script>
+
+    <!-- Sección de portada -->
+    <section>
+        <main>
+            <div class="portada" id="inicio">
+                <h1>"Seguridad y conexión en las alturas:<br> líneas peatonales elevadas."</h1>
+            </div>
+        </main>
+    </section>
+
+    <!-- Sección ¿Por qué este proyecto? -->
+    <section id="porque"></section>
+    <div class="proyecto">
+        <div class="text">
+            <h1>¿Por Qué Este Proyecto?</h1>
+            <p>
+                Es evidente la necesidad de mejorar la seguridad y accesibilidad para peatones en nuestra ciudad. Las
+                líneas peatonales elevadas ofrecen un camino seguro, protegiendo a los caminantes del tráfico y
+                fomentando la actividad. Además, al reducir la congestión y mejorar la calidad del aire, este proyecto
+                transforma la movilidad y revitaliza nuestras comunidades. ¡Un paso hacia un futuro más seguro y
+                saludable para todos!
+            </p>
+        </div>
+        <img src="./IMAGENES/Proyecto.png" width="450">
+    </div>
+
+    <!-- Sección Características -->
+    <h1 class="titulo">Características</h1>
+    <section id="caracteristica"></section>
+    <div class="containerCarta">
+        <!-- Tarjeta 1: Impacto -->
+        <div class="card">
+            <div class="img">
+                <img src="./IMAGENES/impacto.jpg" alt="Impacto">
+            </div>
+            <div class="content">
+                <h2>Impacto</h2>
+                <p>Las líneas peatonales elevadas aumentarán la seguridad, facilitarán el acceso y fomentarán el
+                    transporte sostenible, creando comunidades más seguras y agradables.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2: Beneficios -->
+        <div class="card">
+            <div class="img">
+                <img src="./IMAGENES/beneficio.gif" alt="Beneficios">
+            </div>
+            <div class="content">
+                <h2>Beneficios</h2>
+                <p>Aumentan la seguridad al proteger a los peatones del tráfico, mejorar la visibilidad para los
+                    conductores y facilitar el acceso a personas con movilidad reducida.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3: Seguridad -->
+        <div class="card">
+            <div class="img">
+                <img src="./IMAGENES/seguridad.jpg" alt="Seguridad">
+            </div>
+            <div class="content">
+                <h2>Seguridad</h2>
+                <p>La seguridad es clave en nuestro proyecto de líneas peatonales elevadas, al separar a los peatones
+                    del tráfico y fomentar la movilidad activa.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Descubre -->
+    <section id="descubre"></section>
+    <h1 class="titulo2">Descubre más en el siguiente video</h1>
+    <video controls autoplay loop>
+        <source src="./IMAGENES/videoProyecto.mp4" type="video/mp4">
+    </video>
+
+    <!-- Botón para volver al inicio -->
+    <script src="./JS/botonArriba.js"></script>
+    <a href="#inicio"><img src="./IMAGENES/flechaArriba.png" alt="Flecha hacia arriba" id="botonArriba"></a>
+    <script src="./JS/botonArriba.js"></script>
+    <link rel="stylesheet" href="./CSS/botonArriba.css">
+
+    <!-- Footer -->
+    <section id="redes">
+        <footer>
+            <div class="footer">
+                <img src="./IMAGENES/icono3.png" width="150px">
+                
+                <!-- Iconos de redes sociales -->
+                <ul class="icono">
+                    <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
+                    <li><a href="https://www.facebook.com/tecnologiaVG?locale=es_LA" target="_blank"><i class="fab fa-facebook-f icon"></i></a></li>
+                    <li><a href="https://www.youtube.com/@vallegrande_/videos" target="_blank"><i class="fa-brands fa-youtube icon"></i></a></li>
+                    <li><a href="https://www.instagram.com/valle_grande_oficial/" target="_blank"><i class="fa-brands fa-instagram icon"></i></a></li>
+                </ul>
+
+                <!-- Enlaces adicionales -->
+                <ul class="busquedas">
+                    <li>Inicio</li>
+                    <li>|</li>
+                    <li>Explora</li>
+                    <li>|</li>
+                    <li>Contacto</li>
+                    <li>|</li>
+                    <li>Historia</li>
+                    <li>|</li>
+                    <li>Contribuir</li>
+                </ul>
+
+                <!-- Derechos reservados -->
+                <div class="copyright">
+                    &copy; Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

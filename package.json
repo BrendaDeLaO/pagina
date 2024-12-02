@@ -1,18 +1,11 @@
 {
   "dependencies": {
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "express": "^4.21.1",
+    "moment-timezone": "^0.5.46",
     "mysql": "^2.18.1",
-    "mysql2": "^3.11.4"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "name": "pagina",
-  "version": "1.0.0",
-  "main": "server.js",
-  "devDependencies": {},
-  "author": "Brenda",
-  "license": "ISC",
-  "description": ""
+    "mysql2": "^3.11.4",
+    "sweetalert": "^2.1.2"
+  }
 }

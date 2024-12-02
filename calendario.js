@@ -2,14 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(cors());
 
 const connection = mysql.createConnection({
-  host: 'team05.ctes6auum80u.us-east-1.rds.amazonaws.com',
+  host: 'bd05.cdggooyqe936.us-east-1.rds.amazonaws.com',
   user: 'admin',
-  password: 'equipo05',
+  password: 'team983447196',
   database: 'holiday', // Asegúrate de reemplazar esto con el nombre correcto de tu base de datos
   port: 3306
 });
@@ -36,5 +36,5 @@ app.get('/data', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
+  console.log(`Servidor escuchando en http://54.162.70.89:${port}`);
 });

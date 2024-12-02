@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovaNexus</title>
+    <link rel="icon" href="/IMAGENES/logoFooter.png">
+
+    <!-- Enlaces a archivos CSS -->
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/loader.css">
+    <link rel="stylesheet" href="CSS/botonArriba.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Enlaces a funcionalidades hechos en Java Script -->
+    <script src="JS/menu.js"></script>
+    <script src="JS/loader.js"></script>
+    <script src="JS/verMas.js"></script>
+
+    <!--calendario-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchData();
+        });
+
+        async function fetchData() {
+            try {
+                const response = await axios.get('http://54.162.70.89:3001/data');
+                const data = response.data;
+                compareDates(data);
+            } catch (error) {
+                console.error('Error obteniendo los datos:', error);
+            }
+        }
+
+        function compareDates(data) {
+            const currentDate = moment().tz('America/Lima').format('YYYY-MM-DD');
+            console.log('Fecha actual (Horario Perú):', currentDate);
+
+            data.forEach(record => {
+                const recordDate = moment(record.holiday_date).tz('America/Lima').format('YYYY-MM-DD');
+                console.log('Fecha del registro:', recordDate);
+
+                if (recordDate === currentDate) {
+                    Swal.fire({
+                        title: `¡Hoy es el ${record.holiday_name}!`,
+                        text: `Relacionado con el ${record.ods_related}`,
+                        icon: 'info',
+                        confirmButtonText: 'Está bien',
+                        background: '#f9f9f9',
+                        backdrop: `rgba(0, 0, 0, 0.4)url("https://cdn.jsdelivr.net/gh/limonte/sweetalert2@7.33.1/underline-2.gif")left top no-repeat`
+                    });
+                }
+            });
+        }
+    </script>
+
+    <!-- librerias adicionales -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- Animación de carga de la página -->
+    <div id="loaderPage" class="seccion_loader">
+        <div class="loader">
+            <div class="loader_1"></div>
+            <div class="loader_2"></div>
+        </div>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <img src="IMAGENES/icono1.png" alt="Logo" class="logo">
+        <div class="menu-hamburguesa" id="menuHamburguesa">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/index.html">Inicio</a>
+                <div class="dropdown">
+                    <a href="#opcion1">Importancia</a>
+                    <a href="#redes">Redes Sociales</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="./ods09.html">ODS09</a>
+            </li>
+
+            <li>
+                <a href="./proyecto.html">Proyecto</a>
+            </li>
+
+            <li>
+                <a href="./explora.html">Explora</a>
+            </li>
+
+            <li>
+                <a href="./contacto.html">Contacto</a>
+            </li>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- Contenido de la portada -->
+    <section id="seccion1">
+        <main id="inicio">
+            <div class=" container_cover">
+                <div class="cover">
+                    <div class="conten">
+                        <h1>UNIDOS POR<br><span class="texto"></span></h1>
+                        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                        <script>
+                            var typed = new Typed(".texto", {
+                                strings: ["MUNDO MEJOR", "EL CAMBIO", "UN MISMO PROPOSITO", "UNA MEJOR VIDA", "MAS POSIBILIDADES", "UN FUTURO MEJOR"],
+                                typeSpeed: 60,
+                                backSpeed: 60,
+                                loop: true,
+                            })
+                        </script>
+                        <input type="button" value="ver el proyecto" onclick="location.href='/public/proyecto.html'">
+                    </div>
+
+                    <div class="png">
+                        <img src="IMAGENES/Innovation-amico.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Íconos de redes sociales -->
+    <div class="social">
+        <a href="#"><i class="fab fa-twitter icon"></i></i></a>
+        <a href="https://www.facebook.com/tecnologiaVG?locale=es_LA" target="_blank"><i
+                class="fab fa-facebook-f icon"></i></a>
+        <a href="https://www.youtube.com/@vallegrande_/videos" target="_blank"><i
+                class="fa-brands fa-youtube icon"></i></a>
+        <a href="https://www.instagram.com/valle_grande_oficial/" target="_blank"><i
+                class="fa-brands fa-instagram icon"></i></a>
+    </div>
+
+    <!-- Botón "saber más" -->
+    <div class="buuton_box">
+        <i class="fas fa-arrow-down"></i>
+        <p>saber mas</p>
+    </div>
+
+    <!-- Sección sobre los objetivos -->
+    <section id="opcion1">
+        <!-- Texto sobre los ODS -->
+        <div class="contenedor1">
+            <img src="IMAGENES/ods.gif" width="300" height="300">
+            <div class="texto">
+                <h1>¿QUE SON LOS ODS?</h1>
+                <p>Los Objetivos de Desarrollo Sostenible (ODS), también conocidos como Objetivos Globales, fueron
+                    adoptados por las Naciones Unidas en 2015 como un llamamiento universal para poner fin a la pobreza,
+                    proteger el planeta y garantizar que para el 2030 todas las personas disfruten de paz y prosperidad.
+                </p>
+                <p><a href=""><i class="fa-solid fa-link"></i>Visitar pagina oficial</a></p>
+            </div>
+        </div>
+
+        <!-- Sección sobre la importancia de los ODS -->
+        <div class="contenedor2">
+            <div class="texto-dos">
+                <h1>¿PORQUE ES IMPORTANTE?</h1>
+                <p>En un contexto donde la responsabilidad social y ambiental se vuelve fundamental, alinear la
+                    estrategia mundial con los ODS no solo refuerza la posición ética de todos, sino que también ayuda a
+                    las personas a asegurar su propia sostenibilidad a largo plazo, posicionándose como líderes
+                    comprometidos con un futuro más justo y equitativo.</p>
+                <div class="frase">
+                    <img src="IMAGENES/corazon.png" alt="" width="50px">
+                    <p>“Los ODS son nuestra hoja de ruta hacia un <br>futuro sostenible”</p>
+                </div>
+            </div>
+            <img src="IMAGENES/planeta.png" width="350" height="300">
+        </div>
+    </section>
+    <hr>
+
+    <!-- Galería de los 17 ODS -->
+    <div class="galeria">
+        <h1>LAS 17 ODS</h1>
+        <div class="contenedor-imagenes">
+
+            <!-- Cada imagen tiene su respectivo overlay con descripción -->
+            <div class="imagen">
+                <img src="IMAGENES/FinPOBREZA.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 1 busca erradicar la pobreza en todas sus formas y dimensiones, garantizando que todas las
+                        personas tengan acceso a los recursos necesarios para una vida digna.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/hambreCERO.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 2 busca acabar con el hambre en todo el mundo, mejorar la nutrición y asegurar que todos
+                        tengan acceso a alimentos suficientes y nutritivos para una vida saludable.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/saludBIENESTAR.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 3 busca asegurar una vida sana y promover el bienestar para todos, reduciendo las tasas de
+                        mortalidad y garantizando el acceso a servicios de salud esenciales para todas las personas.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/educacionCALIDAD.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 4 busca garantizar una educación inclusiva y de calidad, promoviendo oportunidades de
+                        aprendizaje para todos a lo largo de la vida y mejorando la igualdad de acceso a la educación.
+                    </p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/IgualdadGenero.jpg" alt="">
+                <div class="overlay">
+                    <p>El ODS 5 busca lograr la igualdad de género y empoderar a todas las mujeres y niñas, eliminando
+                        la
+                        discriminación y promoviendo el acceso igualitario a oportunidades y recursos.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/aguaSANEAMIENTO.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 6 busca asegurar el acceso universal a agua potable segura y servicios de saneamiento
+                        adecuados, promoviendo la gestión sostenible de los recursos hídricos y la salud pública.</p>
+                </div>
+            </div>
+
+            <!-- Botón para ver mas ODS -->
+            <button id="verMas">Ver más</button>
+
+            <div class="imagen">
+                <img src="IMAGENES/energiaASEQUIBLE.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 7 busca garantizar el acceso a energía asequible, segura, sostenible y moderna,
+                        promoviendo la
+                        transición hacia fuentes de energía renovables y la eficiencia energética.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/trabajoDECENTE.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 8 busca promover el crecimiento económico inclusivo y sostenible, asegurando el acceso a
+                        empleo pleno y productivo y fomentando el emprendimiento y la innovación.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/industriaINNOVACION.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 9 busca construir infraestructuras resilientes y promover la industrialización inclusiva y
+                        sostenible, fomentando la innovación para mejorar el desarrollo económico y social.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/reduccionDESIGUALDADES.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 10 busca reducir la desigualdad dentro y entre los países, asegurando que todos tengan
+                        igualdad de oportunidades y acceso a recursos para mejorar la cohesión social.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="./IMAGENES/CiudadesComunidades.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 11 busca hacer las ciudades y comunidades inclusivas, seguras y sostenibles, mejorando la
+                        planificación urbana y la gestión de recursos para el desarrollo urbano sustentable.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="./IMAGENES/ProduccionConsumo.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 12 busca asegurar patrones de consumo y producción sostenibles, reduciendo el desperdicio
+                        de
+                        recursos y promoviendo la sostenibilidad en la producción y el consumo de bienes.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/accionCLIMA.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 13 busca tomar medidas urgentes para combatir el cambio climático y sus impactos,
+                        promoviendo
+                        la reducción de emisiones y la adaptación a los efectos del cambio climático.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/vidaSUBMARINA.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 14 busca conservar y usar de manera sostenible los océanos, mares y recursos marinos,
+                        protegiendo la vida marina y reduciendo la contaminación y la explotación insostenible.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/vidaECOSISTEMA.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 15 busca proteger, restaurar y promover el uso sostenible de los ecosistemas terrestres,
+                        combatiendo la deforestación y la pérdida de biodiversidad para conservar los recursos
+                        naturales.
+                </div>
+                </p>
+            </div>
+
+            <div class="imagen">
+                <img src="./IMAGENES/PazJusticia.png" alt="">
+                <div class="overlay">
+                    <p>El ODS 16 busca promover sociedades pacíficas, justas e inclusivas, fortaleciendo el estado de
+                        derecho, la transparencia y la justicia en las instituciones para el desarrollo sostenible.</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="IMAGENES/alianzaOBJETIVO.jpg" alt="">
+                <div class="overlay">
+                    <p>El ODS 17 busca revitalizar la alianza global para el desarrollo sostenible, fomentando la
+                        cooperación y el apoyo mutuo entre países, organizaciones y sectores para alcanzar los objetivos
+                        globales.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para ver menos ODS-->
+        <button id="verMenos" style="display: none;">Ver menos</button>
+    </div>
+    <hr>
+
+    <!-- Botón de regreso arriba -->
+    <script src="JS/botonArriba.js"></script>
+    <a href=#inicio><img src="IMAGENES/flechaArriba.png" alt="flecha hacia arriba" id="botonArriba"></a>
+
+    <!-- Pie de pagina-->
+    <section id="redes">
+        <footer>
+            <div class="footer">
+                <img src="IMAGENES/icono3.png" width="150px">
+                <ul class="icono">
+                    <li>
+                        <a href="#"><i class="fab fa-twitter icon"></i></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/tecnologiaVG?locale=es_LA" target="_blank"><i
+                                class="fab fa-facebook-f icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@vallegrande_/videos" target="_blank"><i
+                                class="fa-brands fa-youtube icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/valle_grande_oficial/" target="_blank"><i
+                                class="fa-brands fa-instagram icon"></i></a>
+                    </li>
+                </ul>
+                <ul class="busquedas">
+                    <li>Inicio</li>
+                    <li>|</li>
+                    <li>Explora</li>
+                    <li>|</li>
+                    <li>Contacto</li>
+                    <li>|</li>
+                    <li>Contribuir</li>
+                </ul>
+                <div class="copyright">
+                    &copy;Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+    </section>
+
+</body>
+</html>

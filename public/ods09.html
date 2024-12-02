@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadatos para la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enlaces a archivos CSS para estilos -->
+    <link rel="stylesheet" href="./CSS/ods09.css">
+    <link rel="icon" href="./IMAGENES/logoFooter.png"> <!-- Icono de la página -->
+    <link rel="stylesheet" href="./CSS/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/botonArriba.css">
+    
+    <title>InnovaNexus</title> <!-- Título de la página -->
+</head>
+
+<body>
+
+    <!-- Animación de carga -->
+    <div id="loaderPage" class="seccion_loader">
+        <div class="loader">
+            <div class="loader_1"></div>
+            <div class="loader_2"></div>
+        </div>
+    </div>
+    <script src="./JS/loader.js"></script>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <!-- Logo de la página -->
+        <img src="./IMAGENES/icono1.png" alt="Logo" class="logo">
+        
+        <!-- Menú hamburguesa para dispositivos móviles -->
+        <div class="menu-hamburguesa" id="menuHamburguesa">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Enlaces de navegación -->
+        <ul id="menu">
+            <li><a href="./index.html">Inicio</a></li>
+            <li>
+                <a href="./ods09.html">ODS09</a>
+                <div class="dropdown">
+                    <a href="#retos">Nuestros retos</a>
+                    <a href="#infografia">Infografía</a>
+                </div>
+            </li>
+            <li><a href="./proyecto.html">Proyecto</a></li>
+            <li><a href="./explora.html">Explora</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <script src="./JS/menu.js"></script>
+
+    <!-- Sección de portada -->
+    <section>
+        <main>
+            <div class="portada" id="seccion1">
+                <h1>INDUSTRIA<br>INNOVACIÓN E <br>INFRAESTRUCTURA</h1>
+            </div>
+        </main>
+    </section>
+
+    <!-- Texto sobre los objetivos -->
+    <div class="cont">
+        <img src="./IMAGENES/iconoODS9.png" height="300px">
+        <div class="txt">
+            <h1>¿QUÉ ES LA ODS 9?</h1>
+            <p>
+                El Objetivo 9 busca desarrollar infraestructuras resilientes, promover la industrialización sostenible y
+                fomentar la innovación. Este enfoque es crucial para el crecimiento económico, el desarrollo social y la
+                acción climática, especialmente en un contexto de desigualdades crecientes. Se enfatiza la necesidad de
+                una industrialización inclusiva que garantice oportunidades para todos, respaldada por avances
+                tecnológicos y estructuras sólidas (ONU,2024).
+            </p>
+        </div>
+    </div>
+
+    <!-- Principales retos asociados al ODS 9 -->
+    <div class="retos" id="retos">
+        <h2>Principales Retos</h2>
+
+        <div class="cuadros">
+            <!-- Reto 1: Innovación y Adaptabilidad -->
+            <div class="cuadro">
+                <img src="./IMAGENES/innovacion.png" class="png">
+                <h2>Innovación y Adaptabilidad</h2>
+                <p class="txt">
+                    La falta de incentivos y resistencia al cambio obstaculizan la innovación y complican la
+                    modernización industrial.
+                </p>
+            </div>
+
+            <!-- Reto 2: Desigualdad en el acceso a infraestructura y tecnología -->
+            <div class="cuadro">
+                <img src="./IMAGENES/phone.png" class="png">
+                <h2>Desigualdad en el Acceso a Infraestructura y Tecnología</h2>
+                <p class="txt">
+                    La falta de infraestructura entre urbanas y rurales agrava desigualdades y frena el
+                    crecimiento en zonas menos desarrolladas.
+                </p>
+            </div>
+
+            <!-- Reto 3: Financiación y recursos -->
+            <div class="cuadro">
+                <img src="./IMAGENES/financia.png" class="png">
+                <h2>Financiación y Recursos</h2>
+                <p class="txt">
+                    Los países en desarrollo luchan por invertir en infraestructura, lo que frena su
+                    industrialización y adopción de tecnologías.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Infografía referente a la ODS 9 -->
+    <div class="info" id="infografia">
+        <div class="titulo">
+            <h2>INFOGRAFÍA REFERENTE A LA ODS09</h2>
+            <a href="./IMAGENES/PDF.pdf"><i class="fa-solid fa-hand-point-right"></i> Enlace aquí</a>
+        </div>
+        <div class="imagenes">
+            <div class="infografia">
+                <img src="./IMAGENES/infografia.png" alt="Infografía ODS 9">
+            </div>
+            <div class="señalar">
+                <img src="./IMAGENES/Señalar.png" alt="Señalador">
+            </div>
+        </div>
+    </div>
+
+    <!-- Relaciones entre ODS -->
+    <div class="tituloRelaciones">
+        <h2>ODS RELACIONADAS CON LA ODS 09</h2>
+    </div>
+    <section id="relaciones">
+        <!-- Imágenes de ODS relacionadas -->
+        <img src="./IMAGENES/educacionCALIDAD.png" alt="Educación de calidad">
+        <img src="./IMAGENES/trabajoDECENTE.png" alt="Trabajo decente">
+        <img src="./IMAGENES/CiudadesComunidades.png" alt="Ciudades y comunidades sostenibles">
+        <img src="./IMAGENES/ProduccionConsumo.png" alt="Producción y consumo responsables">
+        <img src="./IMAGENES/accionCLIMA.png" alt="Acción por el clima">
+        <img src="./IMAGENES/alianzaOBJETIVO.jpg" alt="Alianzas para lograr los objetivos">
+    </section>
+
+    <!-- Botón para volver al inicio -->
+    <script src="./JS/botonArriba.js"></script>
+    <a href="#seccion1"><img src="./IMAGENES/flechaArriba.png" alt="flecha hacia arriba" id="botonArriba"></a>
+    <link rel="stylesheet" href="/CSS/botonArriba.css">
+
+    <!-- Footer de la página -->
+    <footer>
+        <div class="footer">
+            <img src="./IMAGENES/icono3.png" width="150px">
+            
+            <!-- Iconos de redes sociales -->
+            <ul class="icono">
+                <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
+                <li><a href="https://www.facebook.com/tecnologiaVG?locale=es_LA" target="_blank"><i class="fab fa-facebook-f icon"></i></a></li>
+                <li><a href="https://www.youtube.com/@vallegrande_/videos" target="_blank"><i class="fa-brands fa-youtube icon"></i></a></li>
+                <li><a href="https://www.instagram.com/valle_grande_oficial/" target="_blank"><i class="fa-brands fa-instagram icon"></i></a></li>
+            </ul>
+
+            <!-- Enlaces adicionales -->
+            <ul class="busquedas">
+                <li>Inicio</li>
+                <li>|</li>
+                <li>Explora</li>
+                <li>|</li>
+                <li>Contacto</li>
+                <li>|</li>
+                <li>Contribuir</li>
+            </ul>
+
+            <!-- Derechos de autor -->
+            <div class="copyright">
+                &copy; Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
